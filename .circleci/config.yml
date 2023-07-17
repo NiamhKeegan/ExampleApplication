@@ -24,7 +24,8 @@ jobs:
       key: dependency-cache-{{ checksum "package-lock.json"}}
     - run:
       name: install-npm
-      command: npm install
+      command: npm install - setup remote docker 
+
     - run:
       name: test-run
       command: npm run test
